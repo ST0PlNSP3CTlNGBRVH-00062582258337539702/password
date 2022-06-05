@@ -83,8 +83,7 @@ async function onDecrypt() {
   try {
     decrypted = await api.decrypt(encrypted, password, salt, iv);
   } catch {
-    error("Incorrect password!");
-    return;
+    console.log(api.decrypt(encrypted, password, salt, iv))
   }
 
   // Print the decrypted link to the output area
